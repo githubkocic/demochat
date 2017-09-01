@@ -16,10 +16,8 @@ ENV NODE_ENV production
 RUN apk add --no-cache --virtual .build-dep python make g++ krb5-dev && \
     npm set progress=false && \
     npm config set depth 0 && \
-    npm install && \
+    npm install mocha shortid && \
     npm cache clean && \
-    npm install --global mocha && \
-    npm install shortid && \
     apk del .build-dep && \
     rm -rf /tmp/*
 
