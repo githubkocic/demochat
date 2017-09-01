@@ -19,6 +19,7 @@ RUN apk add --no-cache --virtual .build-dep python make g++ krb5-dev && \
     npm install && \
     npm cache clean && \
     npm install --global mocha && \
+    npm install shortid && \
     apk del .build-dep && \
     rm -rf /tmp/*
 
