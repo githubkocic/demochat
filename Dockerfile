@@ -18,6 +18,7 @@ RUN apk add --no-cache --virtual .build-dep python make g++ krb5-dev && \
     npm config set depth 0 && \
     npm install && \
     npm cache clean && \
+    npm install --global mocha && \
     apk del .build-dep && \
     rm -rf /tmp/*
 
